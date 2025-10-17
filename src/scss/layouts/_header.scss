@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  padding: 6px 0;
+  background-color: transparent;
+  color: var(--dark);
+  transition: 0.25s ease-in-out;
+
+  &-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width: 1249.98px) {
+      gap: 10px;
+    }
+
+    @media (max-width: 1049.98px) {
+      gap: 8px;
+    }
+
+    @media (max-width: 575.98px) {
+      gap: 12px;
+    }
+  }
+
+  &-logo {
+    position: relative;
+    z-index: 4;
+    align-self: center;
+    display: block;
+    width: 129px;
+    max-height: 29px;
+    margin-right: 100px;
+    border-radius: 20px;
+    transition: 0.25s ease-in-out;
+
+    @media (max-width: 1000px) {
+      margin-right: auto;
+    }
+
+    &:hover {
+      animation: logo-hover 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+      box-shadow: 0px 0px 25px 15px var(--blue-clouds);
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-social {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-left: auto;
+
+    @media (max-width: 1249.98px) {
+      gap: 10px;
+    }
+
+    @media (max-width: 1049.98px) {
+      gap: 8px;
+    }
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+
+    & > .link-social {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+
+      &:first-child {
+        display: none;
+
+        @media (min-width: 992px) and (max-width: 1249.98px) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &-contacts {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-left: auto;
+
+    @media (max-width: 1249.98px) {
+      display: none;
+      margin-left: unset;
+    }
+
+    @media (max-width: 991.98px) {
+      display: flex;
+    }
+
+    & > a {
+      color: inherit;
+    }
+  }
+
+  &-actions {
+    margin-left: auto;
+
+    @media (max-width: 991.98px) {
+      margin-left: unset;
+
+      & > * {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  & .btn-burger {
+    display: none;
+
+    @media (max-width: 991.98px) {
+      display: flex;
+    }
+  }
+
+  &.scrolled {
+    background-color: var(--dark);
+    box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+
+    @media (max-width: 991.98px) {
+      padding: 6px 0;
+    }
+  }
+}

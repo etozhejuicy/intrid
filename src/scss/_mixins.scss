@@ -1,0 +1,44 @@
+// TDK
+@mixin h1 {
+	font-size: 45px;
+
+	@media (max-width: 991.98px) {
+		font-size: 30px;
+	}
+}
+
+@mixin h2 {
+	font-size: 36px;
+
+	@media (max-width: 991.98px) {
+		font-size: 26px;
+	}
+}
+
+@mixin h3 {
+	font-size: 22px;
+
+	@media (max-width: 991.98px) {
+		font-size: 18px;
+	}
+}
+
+@mixin h4 {
+	font-size: 18px;
+
+	@media (max-width: 991.98px) {
+		font-size: 14px;
+	}
+}
+
+@mixin h5 {
+	font-size: 16px;
+
+	@media (max-width: 991.98px) {
+		font-size: 14px;
+	}
+}
+
+@mixin h6 {
+	font-size: 14px;
+}
